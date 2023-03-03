@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="todoapp">
+        <header class="header">
+            <h1>todos</h1>
+            <input class="new-todo" autofocus autocomplete="off" placeholder="What needs to be done?" />
+        </header>
+        <section class="main">
+            <input id="toggle-all" class="toggle-all" type="checkbox" />
+            <label for="toggle-all">Mark all as complete</label>
+            <ul class="todo-list">
+                <!-- :class="{ completed: item.done }" -->
+                <li class="todo">
+                    <div>
+                        <input class="toggle" type="checkbox" />
+                        <label>学习vue</label>
+                        <button class="destroy"></button>
+                    </div>
+                    <input class="edit" type="text" style="display: none;" />
+                </li>
+            </ul>
+        </section>
+        <footer class="footer">
+            <span class="todo-count"> <strong></strong> 1 item left </span>
+            <ul class="filters">
+                <li><a href="">All</a>
+                </li>
+                <li><a href="">Active</a>
+                </li>
+                <li>
+                    <!-- :class="{ selected: visibility == 'Completed'} -->
+                    <a href="">Completed</a>
+                </li>
+            </ul>
+            <button class="clear-completed">
+                Clear completed
+            </button>
+        </footer>
+
+    </section>
+</body>
+
+</html>
